@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Are You My Favorite Friend?</title>
+  <link rel="stylesheet" href="../styles/main.css">
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script> <!-- SweetAlert2 -->
+  <style>
+    body {
+      background: #c70000;
+      margin: 0;
+      font-family: 'Segoe UI', Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .container {
+      max-width: 500px;
+      background: #fff;
+      padding: 32px 28px;
+      border-radius: 18px;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.12);
+      text-align: center;
+    }
+    h1 {
+      color: #c70000;
+      margin-bottom: 24px;
+    }
+    p {
+      font-size: 1.2em;
+      margin-bottom: 32px;
+    }
+    button {
+      padding: 10px 24px;
+      font-size: 1em;
+      font-weight: bold;
+      border-radius: 8px;
+      border: none;
+      cursor: pointer;
+      margin: 0 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+      transition: all 0.2s;
+    }
+    .yes-btn {
+      background: #c70000;
+      color: #fff;
+    }
+    .no-btn {
+      background: #fff;
+      color: #c70000;
+      border: 2px solid #c70000;
+      position: relative;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Majd, am I your favorite friend?</h1>
+    <p>Click wisely 😏</p>
+    <button class="yes-btn" id="yesBtn">Yes</button>
+    <button class="no-btn" id="noBtn">No</button>
+             <a href="harry-potter.html" style="background:#c70000;color:#fff;padding:10px 22px;border-radius:8px;text-decoration:none;font-weight:bold;box-shadow:0 2px 8px rgba(0,0,0,0.10);">Back</a>
+
+  </div>
+
+  <script>
+    const noBtn = document.getElementById("noBtn");
+    const yesBtn = document.getElementById("yesBtn");
+
+    // Move "No" button randomly on hover
+    noBtn.addEventListener("mouseenter", () => {
+      const x = Math.floor(Math.random() * 200) - 100;
+      const y = Math.floor(Math.random() * 200) - 100;
+      noBtn.style.transform = `translate(${x}px, ${y}px)`;
+    });
+
+    // Sweet alert when clicking "Yes"
+    yesBtn.addEventListener("click", () => {
+      Swal.fire({
+        title: '🥰 Yay!',
+        text: "Yes! I know I’m your favorite person 😎",
+        icon: 'success',
+        confirmButtonText: '💖 Love it!'
+      });
+    });
+  </script>
+</body>
+</html>

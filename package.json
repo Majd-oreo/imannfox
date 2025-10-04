@@ -1,0 +1,24 @@
+{
+  "name": "iman-website",
+  "version": "1.0.0",
+  "description": "A personalized website dedicated to Iman, featuring her favorite animals, personality type, and references to her favorite shows.",
+  "main": "src/index.html",
+  "scripts": {
+    "start": "live-server src"
+  },
+  "keywords": [
+    "Iman",
+    "personalized",
+    "website",
+    "animals",
+    "ENTP",
+    "The Walking Dead",
+    "Harry Potter"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {
+    "live-server": "^1.2.1"
+  }
+}
